@@ -1,4 +1,4 @@
-package com.github.jwillebrands.ijsloppyfocus
+package dev.willebrands.intellij.sloppyfocus
 
 import com.intellij.ide.highlighter.XmlFileType
 import com.intellij.psi.xml.XmlFile

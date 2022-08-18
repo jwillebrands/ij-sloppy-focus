@@ -1,7 +1,7 @@
-package com.github.jwillebrands.ijsloppyfocus.services
+package dev.willebrands.intellij.sloppyfocus.services
 
 import com.intellij.openapi.project.Project
-import com.github.jwillebrands.ijsloppyfocus.MyBundle
+import dev.willebrands.intellij.sloppyfocus.MyBundle
 
 class MyProjectService(project: Project) {
 

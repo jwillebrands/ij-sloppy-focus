@@ -1,18 +1,18 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.jwillebrands.ijsloppyfocus</id>
-    <name>ij-sloppy-focus</name>
+    <id>dev.willebrands.intellij.sloppyfocus</id>
+    <name>Sloppy Focus</name>
     <vendor>jwillebrands</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.jwillebrands.ijsloppyfocus.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.jwillebrands.ijsloppyfocus.services.MyProjectService"/>
+        <applicationService serviceImplementation="dev.willebrands.intellij.sloppyfocus.services.MyApplicationService"/>
+        <projectService serviceImplementation="dev.willebrands.intellij.sloppyfocus.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.jwillebrands.ijsloppyfocus.listeners.MyProjectManagerListener"
+        <listener class="dev.willebrands.intellij.sloppyfocus.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>

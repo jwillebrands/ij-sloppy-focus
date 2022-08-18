@@ -1,4 +1,4 @@
-package com.github.jwillebrands.ijsloppyfocus
+package dev.willebrands.intellij.sloppyfocus
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

@@ -1,9 +1,9 @@
-package com.github.jwillebrands.ijsloppyfocus.listeners
+package dev.willebrands.intellij.sloppyfocus.listeners
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
-import com.github.jwillebrands.ijsloppyfocus.services.MyProjectService
+import dev.willebrands.intellij.sloppyfocus.services.MyProjectService
 
 internal class MyProjectManagerListener : ProjectManagerListener {
 
