@@ -1,7 +1,25 @@
-<idea-plugin>
+<idea-plugin url="https://www.github.com/jwillebrands/ij-sloppy-focus">
 	<id>dev.willebrands.intellij.sloppyfocus</id>
 	<name>Sloppy Focus</name>
 	<vendor>Jan-Willem Willebrands</vendor>
+
+	<description><![CDATA[
+		Brings sloppy focus to your favorite IDE. Change focus by simply hovering over an editor window.
+
+		<p>
+		Currently supports switching to:
+		<ul>
+			<li>Editors</li>
+		</ul>
+		</p>
+
+		<p>
+			This plugin is still very much in development and may not work in all scenarios.
+			If you encounter any bugs, or have requests for a new feature, please create an issue on the <a href="">project page</a>.
+		</p>
+	]]></description>
+
+	<change-notes>Initial release of the plugin.</change-notes>
 
 	<depends>com.intellij.modules.platform</depends>
 
