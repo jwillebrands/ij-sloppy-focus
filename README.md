@@ -1,41 +1,38 @@
-# ij-sloppy-focus
+# Sloppy Focus for IntelliJ
 
 ![Build](https://github.com/jwillebrands/ij-sloppy-focus/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Verify the [pluginGroup](./gradle.properties), [plugin ID](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the Plugin ID in the above README badges.
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
-
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
-
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
+This plugin brings sloppy focus to your favorite IDE.
 <!-- Plugin description end -->
+
+## Functionality
+
+Sloppy Focus currently supports editor windows only. If you would like another type of window to be supported, please create
+a [feature request](https://github.com/jwillebrands/ij-sloppy-focus/issues).
+
+**Note:** This plugin is still in a very early phase. It 'works on my machine', but has not yet seen much use and has not been
+tested properly. There will be bugs and rough edges. Please feel free to create bug reports for usability or compatibility issues.
 
 ## Installation
 
-- Using IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "ij-sloppy-focus"</kbd> >
-  <kbd>Install Plugin</kbd>
-  
-- Manually:
+This plugin is provided both as a regular IDE plugin, and as a Flora micro-plugin script.
+Feature parity will be maintained as long as it is feasible to do so.
 
-  Download the [latest release](https://github.com/jwillebrands/ij-sloppy-focus/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+### Using IDE built-in plugin system
 
+<kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "ij-sloppy-focus"</kbd> >
+<kbd>Install Plugin</kbd>
 
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+### Manually
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
+Download the [latest release](https://github.com/jwillebrands/ij-sloppy-focus/releases/latest) and install it manually using
+<kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+
+### Using [Flora](https://plugins.jetbrains.com/plugin/17669-flora-beta-/)
+
+Download the latest version of sloppy-focus.plugin.kts from
+the [releases](https://github.com/jwillebrands/ij-sloppy-focus/releases/latest) page and place it in your project's `.plugins`
+folder. Flora should pick it up automatically.

@@ -1,7 +1,8 @@
-<!-- Keep a Changelog guide -> https://keepachangelog.com -->
-
-# ij-sloppy-focus Changelog
+# Changelog
 
 ## [Unreleased]
+
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+
+- Supports sloppy focus for editor windows.
+- Initial plugin version.
