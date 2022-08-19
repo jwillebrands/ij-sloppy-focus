@@ -6,13 +6,5 @@
 
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="dev.willebrands.intellij.sloppyfocus.services.MyApplicationService"/>
-        <projectService serviceImplementation="dev.willebrands.intellij.sloppyfocus.services.MyProjectService"/>
-    </extensions>
 
-    <applicationListeners>
-        <listener class="dev.willebrands.intellij.sloppyfocus.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
