@@ -4,7 +4,7 @@
 name: Release
 on:
   release:
-    types: [prereleased, released]
+    types: [ prereleased, released ]
 
 jobs:
 
@@ -68,6 +68,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload ${{ github.event.release.tag_name }} ./build/distributions/*
+
+      - name: Upload Flora plugin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload v${{ needs.build.outputs.version }} ./contrib/flora/sloppy-focus.plugin.kts
 
       # Create pull request
       - name: Create Pull Request
