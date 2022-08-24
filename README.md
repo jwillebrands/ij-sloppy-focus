@@ -1,8 +1,8 @@
 # Sloppy Focus for IntelliJ
 
 ![Build](https://github.com/jwillebrands/ij-sloppy-focus/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/19733.svg)](https://plugins.jetbrains.com/plugin/19733)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/19733.svg)](https://plugins.jetbrains.com/plugin/19733)
 
 <!-- Plugin description -->
 This plugin brings sloppy focus to your favorite IDE.
