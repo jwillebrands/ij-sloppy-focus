@@ -1,11 +1,14 @@
 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M32.0845 7.94025V4H24.0203V7.9896H16.029V4H7.91553V7.94025H4V36H16.0044V32.0045C16.0058 30.9457 16.4274 29.9308 17.1766 29.1826C17.9258 28.4345 18.9412 28.0143 20 28.0143C21.0588 28.0143 22.0743 28.4345 22.8234 29.1826C23.5726 29.9308 23.9942 30.9457 23.9956 32.0045V36H36V7.94025H32.0845Z"
-          fill="url(#paint0_linear)"/>
-    <defs>
-        <linearGradient id="paint0_linear" x1="2.94192" y1="4.89955" x2="37.7772" y2="39.7345" gradientUnits="userSpaceOnUse">
-            <stop offset="0.15937" stop-color="#3BEA62"/>
-            <stop offset="0.5404" stop-color="#3C99CC"/>
-            <stop offset="0.93739" stop-color="#6B57FF"/>
-        </linearGradient>
-    </defs>
+	<circle cx="20" cy="20" r="15" stroke="#40B6E0" stroke-opacity="0.7" stroke-width="2"/>
+	<circle cx="20" cy="20" r="13" stroke="#40B6E0" stroke-width="2" fill="white"/>
+	<path d="M 20 2 v 10" stroke-width="2" stroke="#40B6E0"/>
+	<path d="M 2 20 h 10" stroke-width="2" stroke="#40B6E0"/>
+	<path d="M 38 20 h -10" stroke-width="2" stroke="#40B6E0"/>
+	<path d="M 20 38 v -10" stroke-width="2" stroke="#40B6E0"/>
+	<g transform="scale(0.03 0.03), translate(550, 425)" stroke="#DB5860" fill="#DB5860">
+		<!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+		<path d="M23.19 32C28.86 32 34.34 34.08 38.59 37.86L312.6 281.4C317.3 285.6 320 291.6 320 297.9C320 310.1 310.1 320 297.9 320H179.8L236.6 433.7C244.5 449.5 238.1 468.7 222.3 476.6C206.5 484.5 187.3 478.1 179.4 462.3L121.2 346L38.58 440.5C34.4 445.3 28.36 448 22.01 448C9.855 448 0 438.1 0 425.1V55.18C0 42.38 10.38 32 23.18 32H23.19z"/>
+	</g>
+	<defs>
+	</defs>
 </svg>
