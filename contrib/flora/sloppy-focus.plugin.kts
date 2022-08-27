@@ -1,10 +1,5 @@
 import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.diagnostic.debug
-import com.intellij.openapi.editor.Editor
-import com.intellij.openapi.editor.event.EditorMouseEvent
-import com.intellij.openapi.editor.event.EditorMouseListener
-import com.intellij.openapi.fileEditor.FileDocumentManager
-import com.intellij.openapi.wm.IdeFocusManager
 
 
 class SloppyFocusService : EditorMouseListener {
@@ -32,4 +27,4 @@ class SloppyFocusService : EditorMouseListener {
     }
 }
 
-EditorFactory.getInstance().eventMulticaster.addEditorMouseListener(SloppyFocusService())
+EditorFactory.getInstance().eventMulticaster.addEditorMouseListener(SloppyFocusService(), ide.pluginDisposable)
