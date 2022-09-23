@@ -1,10 +1,13 @@
 import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.diagnostic.debug
+import com.intellij.util.Alarm
 
 
 class SloppyFocusService : EditorMouseListener {
     companion object {
         private val logger = Logger.getInstance(SloppyFocusService::class.java)
+        private const val FOCUS_DELAY_MS = 200
+        private val focusChangeAlarm = Alarm()
     }
 
     override fun mouseEntered(event: EditorMouseEvent) {
@@ -14,11 +17,15 @@ class SloppyFocusService : EditorMouseListener {
 
     override fun mouseExited(event: EditorMouseEvent) {
         logger.debug { "Exited editor ${getEditorName(event.editor)}" }
+        focusChangeAlarm.cancelAllRequests()
     }
 
     private fun changeFocusToEditor(editor: Editor) {
-        val focusManager = IdeFocusManager.getInstance(editor.project)
-        focusManager.requestFocus(editor.contentComponent, true)
+        focusChangeAlarm.cancelAllRequests()
+        focusChangeAlarm.addRequest({
+            val focusManager = IdeFocusManager.getInstance(editor.project)
+            focusManager.requestFocus(editor.contentComponent, true)
+        }, FOCUS_DELAY_MS)
     }
 
     private fun getEditorName(editor: Editor): String {
