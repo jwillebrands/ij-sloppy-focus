@@ -16,7 +16,7 @@ import java.awt.Component
 class SloppyFocusSwitcher : ComponentMouseListener {
     private val focusSwitcherAlarm = Alarm()
     private val filter: ComponentFilter = ComponentFilter { UIUtil.isFocusable(it) }.andAnyOf(
-        ComponentTypeFilters.isEditor
+        ComponentTypeFilters.isEditor, ComponentTypeFilters.isTerminal
     )
 
     private val focusDelay

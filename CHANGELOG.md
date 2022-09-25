@@ -5,6 +5,7 @@
 ### Added
 
 - Make focus change delay configurable.
+- Support switching focus to Terminal windows.
 
 ### Changed
 
