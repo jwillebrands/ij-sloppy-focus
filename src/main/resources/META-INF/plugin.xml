@@ -23,6 +23,11 @@
 
 	<depends>com.intellij.modules.platform</depends>
 
+	<projectListeners>
+		<listener class="dev.willebrands.intellij.sloppyfocus.SloppyFocusSwitcher"
+				  topic="dev.willebrands.intellij.sloppyfocus.mouse.ComponentMouseListener"/>
+	</projectListeners>
+
 	<extensions defaultExtensionNs="com.intellij">
 		<editorFactoryMouseListener implementation="dev.willebrands.intellij.sloppyfocus.SloppyFocusService"/>
 		<applicationService
