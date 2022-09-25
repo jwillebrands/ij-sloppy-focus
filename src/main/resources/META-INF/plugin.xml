@@ -29,7 +29,8 @@
 	</projectListeners>
 
 	<extensions defaultExtensionNs="com.intellij">
-		<editorFactoryMouseListener implementation="dev.willebrands.intellij.sloppyfocus.SloppyFocusService"/>
+		<postStartupActivity implementation="dev.willebrands.intellij.sloppyfocus.BackgroundServiceStarter"/>
+
 		<applicationService
 				serviceImplementation="dev.willebrands.intellij.sloppyfocus.settings.SloppyFocusSettings"/>
 		<applicationConfigurable
