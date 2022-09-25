@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Make focus change delay configurable.
+
 ### Changed
 
 - Debounce focus changes by adding a short delay between the mouse enter and switching focus.

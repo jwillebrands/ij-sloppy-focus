@@ -8,13 +8,16 @@ import com.intellij.openapi.editor.event.EditorMouseListener
 import com.intellij.openapi.fileEditor.FileDocumentManager
 import com.intellij.openapi.wm.IdeFocusManager
 import com.intellij.util.Alarm
+import dev.willebrands.intellij.sloppyfocus.settings.SloppyFocusSettings
 
 class SloppyFocusService : EditorMouseListener {
     companion object {
         private val logger = Logger.getInstance(SloppyFocusService::class.java)
-        private const val FOCUS_DELAY_MS = 200
         private val focusChangeAlarm = Alarm()
     }
+
+    val focusDelay
+        get() = SloppyFocusSettings.getInstance().focusDelayMs
 
     override fun mouseEntered(event: EditorMouseEvent) {
         logger.debug { "Entered editor ${getEditorName(event.editor)}" }
@@ -31,7 +34,7 @@ class SloppyFocusService : EditorMouseListener {
         focusChangeAlarm.addRequest({
             val focusManager = IdeFocusManager.getInstance(editor.project)
             focusManager.requestFocus(editor.contentComponent, true)
-        }, FOCUS_DELAY_MS)
+        }, focusDelay)
     }
 
     private fun getEditorName(editor: Editor): String {
