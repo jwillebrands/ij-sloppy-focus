@@ -6,5 +6,5 @@ import java.util.function.Predicate
 typealias ComponentFilter = Predicate<Component>
 
 fun ComponentFilter.andAnyOf(vararg filters: ComponentFilter): ComponentFilter {
-    return filters.reduce { acc, predicate -> acc.or(predicate) }
+    return and(filters.reduce { acc, predicate -> acc.or(predicate) })
 }
