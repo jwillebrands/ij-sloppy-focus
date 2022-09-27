@@ -16,6 +16,18 @@ class SloppyFocusSettingsConfigurable : BoundConfigurable(
                 label("Focus change delay (ms)")
                 intTextField(settings::focusDelayMs)
             }
+            titledRow("Focus Target Selection") {
+                row {
+                    buttonGroup {
+                        row {
+                            radioButton("Switch focus to any focusable component")
+                        }
+                        row {
+                            radioButton("Limit focus switching to editors and terminals", settings::focusEditorAndTerminalOnly)
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -15,16 +15,21 @@ import java.awt.Component
 
 class SloppyFocusSwitcher : ComponentMouseListener {
     private val focusSwitcherAlarm = Alarm()
-    private val filter: ComponentFilter = ComponentFilter { UIUtil.isFocusable(it) }.andAnyOf(
-        ComponentTypeFilters.isEditor, ComponentTypeFilters.isTerminal
-    )
 
     private val focusDelay
         get() = SloppyFocusSettings.getInstance().focusDelayMs
 
+    private val componentFilter
+        get() = when (SloppyFocusSettings.getInstance().focusEditorAndTerminalOnly) {
+            false -> ComponentTypeFilters.anyFocusable
+            else -> ComponentTypeFilters.anyFocusable.andAnyOf(
+                ComponentTypeFilters.isEditor, ComponentTypeFilters.isTerminal
+            )
+        }
+
     override fun mouseEntered(event: ComponentMouseEvent) {
         pluginLogger.debug("mouse entered ${event.component.javaClass.name}")
-        if (filter.test(event.component)) {
+        if (componentFilter.test(event.component)) {
             focusSwitcherAlarm.cancelAllRequests()
             focusSwitcherAlarm.addRequest({ switchFocus(event.component) }, focusDelay, ModalityState.NON_MODAL)
         }

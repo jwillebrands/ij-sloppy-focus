@@ -6,6 +6,7 @@
 
 - Make focus change delay configurable.
 - Support switching focus to Terminal windows.
+- Allow switching focus to any focusable component. This is configurable through settings. (default: off)
 
 ### Changed
 

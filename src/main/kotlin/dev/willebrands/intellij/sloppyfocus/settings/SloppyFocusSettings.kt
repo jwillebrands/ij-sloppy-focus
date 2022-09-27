@@ -16,6 +16,12 @@ class SloppyFocusSettings : SimplePersistentStateComponent<SloppyFocusSettingsSt
             state.focusDelayMs = value
         }
 
+    var focusEditorAndTerminalOnly
+        get() = state.focusEditorAndTerminalOnly
+        set(value) {
+            state.focusEditorAndTerminalOnly = value
+        }
+
     companion object {
         @JvmStatic
         fun getInstance(): SloppyFocusSettings = service()

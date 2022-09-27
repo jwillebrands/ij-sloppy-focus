@@ -4,4 +4,5 @@ import com.intellij.openapi.components.*
 
 class SloppyFocusSettingsState : BaseState() {
     var focusDelayMs by property(200)
+    var focusEditorAndTerminalOnly by property(true)
 }
