@@ -72,7 +72,7 @@ jobs:
       - name: Upload Flora plugin
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload v${{ github.event.release.tag_name }} ./contrib/flora/sloppy-focus.plugin.kts
+        run: gh release upload ${{ github.event.release.tag_name }} ./contrib/flora/sloppy-focus.plugin.kts
 
       # Create pull request
       - name: Create Pull Request
