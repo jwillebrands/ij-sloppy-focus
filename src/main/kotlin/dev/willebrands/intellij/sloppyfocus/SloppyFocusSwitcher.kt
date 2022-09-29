@@ -1,10 +1,9 @@
 package dev.willebrands.intellij.sloppyfocus
 
+import com.intellij.openapi.actionSystem.ex.ActionManagerEx
 import com.intellij.openapi.application.ModalityState
 import com.intellij.openapi.wm.IdeFocusManager
 import com.intellij.util.Alarm
-import com.intellij.util.ui.UIUtil
-import dev.willebrands.intellij.sloppyfocus.filters.ComponentFilter
 import dev.willebrands.intellij.sloppyfocus.filters.ComponentTypeFilters
 import dev.willebrands.intellij.sloppyfocus.filters.andAnyOf
 import dev.willebrands.intellij.sloppyfocus.mouse.ComponentMouseEvent
@@ -27,9 +26,13 @@ class SloppyFocusSwitcher : ComponentMouseListener {
             )
         }
 
+    private fun uiStateAllowsSwitch(): Boolean {
+        return ActionManagerEx.getInstanceEx().isActionPopupStackEmpty
+    }
+
     override fun mouseEntered(event: ComponentMouseEvent) {
         pluginLogger.debug("mouse entered ${event.component.javaClass.name}")
-        if (componentFilter.test(event.component)) {
+        if (componentFilter.test(event.component) && uiStateAllowsSwitch()) {
             focusSwitcherAlarm.cancelAllRequests()
             focusSwitcherAlarm.addRequest({ switchFocus(event.component) }, focusDelay, ModalityState.NON_MODAL)
         }
