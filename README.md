@@ -6,25 +6,32 @@
 
 <!-- Plugin description -->
 This plugin brings sloppy focus to your favorite IDE.
+
+Sloppy focus, sometimes called "focus follows mouse", means your focus switches whenever your cursor enters a focusable region. This
+plugin enables this behavior for editors and terminals, and, optionally, for any focusable IDE component.
 <!-- Plugin description end -->
 
 ## Functionality
 
-Sloppy Focus currently supports editor windows only. If you would like another type of window to be supported, please create
-a [feature request](https://github.com/jwillebrands/ij-sloppy-focus/issues).
+By default, Sloppy Focus will switch focus to terminals and editors when entering with the mouse.
+This behavior can be changed through settings to switch focus to any focusable component.
 
 **Note:** This plugin is still in a very early phase. It 'works on my machine', but has not yet seen much use and has not been
-tested properly. There will be bugs and rough edges. Please feel free to create bug reports for usability or compatibility issues.
+tested properly. There will be bugs and rough edges. Please feel free to
+create [bug reports](https://github.com/jwillebrands/ij-sloppy-focus/issues) for usability or compatibility issues.
 
 ## Installation
 
 This plugin is provided both as a regular IDE plugin, and as a Flora micro-plugin script.
-Feature parity will be maintained as long as it is feasible to do so.
+The Flora plugin currently only supports editors, and will likely not be updated anymore unless I figure out an easy way to bundle
+the main plugin.
 
 ### Using IDE built-in plugin system
 
 <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "ij-sloppy-focus"</kbd> >
 <kbd>Install Plugin</kbd>
+
+Or click the <kbd>Install to IntelliJ</kbd> button on the [plugin page](https://plugins.jetbrains.com/plugin/19733).
 
 ### Manually
 
