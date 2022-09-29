@@ -2,7 +2,8 @@ package dev.willebrands.intellij.sloppyfocus
 
 import com.intellij.openapi.actionSystem.ex.ActionManagerEx
 import com.intellij.openapi.application.ModalityState
-import com.intellij.openapi.wm.IdeFocusManager
+import com.intellij.openapi.components.service
+import com.intellij.openapi.project.Project
 import com.intellij.util.Alarm
 import dev.willebrands.intellij.sloppyfocus.filters.ComponentTypeFilters
 import dev.willebrands.intellij.sloppyfocus.filters.andAnyOf
@@ -12,7 +13,7 @@ import dev.willebrands.intellij.sloppyfocus.settings.SloppyFocusSettings
 import dev.willebrands.intellij.sloppyfocus.util.pluginLogger
 import java.awt.Component
 
-class SloppyFocusSwitcher : ComponentMouseListener {
+class SloppyFocusSwitcher(private val project: Project) : ComponentMouseListener {
     private val focusSwitcherAlarm = Alarm()
 
     private val focusDelay
@@ -44,6 +45,6 @@ class SloppyFocusSwitcher : ComponentMouseListener {
     }
 
     private fun switchFocus(component: Component) {
-        IdeFocusManager.getGlobalInstance().requestFocus(component, true)
+        project.service<FocusSwitcher>().switchFocus(component)
     }
 }
