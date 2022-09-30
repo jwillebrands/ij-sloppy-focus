@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 
+## [0.3.0]
 ### Changed
 - Switching focus is now prevented while a context menu is active.
 
