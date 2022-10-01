@@ -50,5 +50,6 @@
 
 	<extensions defaultExtensionNs="dev.willebrands.intellij.sloppyfocus">
 		<vetoableFocusSwitchListener implementation="dev.willebrands.intellij.sloppyfocus.veto.PopupMenuStateVetoableFocusListener"/>
+		<vetoableFocusSwitchListener implementation="dev.willebrands.intellij.sloppyfocus.veto.SearchEverywhereVetoableFocusListener"/>
 	</extensions>
 </idea-plugin>
