@@ -23,6 +23,10 @@
 
 	<depends>com.intellij.modules.platform</depends>
 
+	<extensionPoints>
+		<extensionPoint name="focusSwitchVetoListener" interface="dev.willebrands.intellij.sloppyfocus.veto.VetoableFocusSwitchListener"/>
+	</extensionPoints>
+
 	<projectListeners>
 		<listener class="dev.willebrands.intellij.sloppyfocus.SloppyFocusSwitcher"
 				  topic="dev.willebrands.intellij.sloppyfocus.mouse.ComponentMouseListener"/>
@@ -30,6 +34,10 @@
 
 	<extensions defaultExtensionNs="com.intellij">
 		<postStartupActivity implementation="dev.willebrands.intellij.sloppyfocus.BackgroundServiceStarter"/>
+
+		<projectService
+				serviceInterface="dev.willebrands.intellij.sloppyfocus.FocusSwitcher"
+				serviceImplementation="dev.willebrands.intellij.sloppyfocus.veto.VetoableFocusSwitcher"/>
 
 		<applicationService
 				serviceImplementation="dev.willebrands.intellij.sloppyfocus.settings.SloppyFocusSettings"/>
