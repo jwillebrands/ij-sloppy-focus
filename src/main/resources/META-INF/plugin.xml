@@ -24,7 +24,7 @@
 	<depends>com.intellij.modules.platform</depends>
 
 	<extensionPoints>
-		<extensionPoint name="focusSwitchVetoListener" interface="dev.willebrands.intellij.sloppyfocus.veto.VetoableFocusSwitchListener"/>
+		<extensionPoint name="vetoableFocusSwitchListener" interface="dev.willebrands.intellij.sloppyfocus.veto.VetoableFocusSwitchListener"/>
 	</extensionPoints>
 
 	<projectListeners>
@@ -46,5 +46,9 @@
 				instance="dev.willebrands.intellij.sloppyfocus.settings.SloppyFocusSettingsConfigurable"
 				id="dev.willebrands.intellij.sloppyfocus.settings.SloppyFocusSettingsConfigurable"
 				displayName="Sloppy Focus Settings"/>
+	</extensions>
+
+	<extensions defaultExtensionNs="dev.willebrands.intellij.sloppyfocus">
+		<vetoableFocusSwitchListener implementation="dev.willebrands.intellij.sloppyfocus.veto.PopupMenuStateVetoableFocusListener"/>
 	</extensions>
 </idea-plugin>
