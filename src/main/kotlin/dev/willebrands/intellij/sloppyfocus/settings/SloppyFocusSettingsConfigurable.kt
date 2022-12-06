@@ -2,8 +2,11 @@ package dev.willebrands.intellij.sloppyfocus.settings
 
 import com.intellij.openapi.options.BoundConfigurable
 import com.intellij.openapi.ui.DialogPanel
-import com.intellij.ui.layout.panel
+import com.intellij.ui.dsl.builder.bindIntText
+import com.intellij.ui.dsl.builder.buttonGroup
+import com.intellij.ui.dsl.builder.panel
 
+@Suppress("UnstableApiUsage")
 class SloppyFocusSettingsConfigurable : BoundConfigurable(
     "Sloppy Focus Settings"
 ) {
@@ -12,20 +15,20 @@ class SloppyFocusSettingsConfigurable : BoundConfigurable(
 
     override fun createPanel(): DialogPanel {
         return panel {
-            row {
-                label("Focus change delay (ms)")
-                intTextField(settings::focusDelayMs)
+            row("Focus change delay (ms)") {
+                intTextField(0..Int.MAX_VALUE, 25).bindIntText(settings::focusDelayMs)
             }
-            titledRow("Focus Target Selection") {
+            buttonGroup(
+                settings::focusEditorAndTerminalOnly,
+                "Focus Target Selection"
+            ) {
                 row {
-                    buttonGroup {
-                        row {
-                            radioButton("Switch focus to any focusable component")
-                        }
-                        row {
-                            radioButton("Limit focus switching to editors and terminals", settings::focusEditorAndTerminalOnly)
-                        }
-                    }
+                    radioButton("Switch focus to any focusable component", false)
+                }
+                row {
+                    radioButton(
+                        "Limit focus switching to editors and terminals", true
+                    )
                 }
             }
         }
