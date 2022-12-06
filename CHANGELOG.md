@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- Switched to UI DSL v2.
 
 ## [0.3.0]
 ### Changed
