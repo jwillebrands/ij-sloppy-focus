@@ -3,8 +3,6 @@
 ## [Unreleased]
 ### Changed
 - Switched to UI DSL v2.
-
-### Changed
 - Switching focus is now prevent when Search Everywhere is active.
 
 ## [0.3.0]
