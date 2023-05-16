@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- Bump compatibility range to include 2023.2
+
 ## [0.4.0] - 2022-12-12
 
 ### Changed
