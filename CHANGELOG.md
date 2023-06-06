@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Improved popup detection. Before only the ActionManager popup stack was checked. Now we also check whether
+  the `PopupFactory` is aware of any active popups. This should prevent more popups (e.g. new Angular schematic) from
+  being auto-closed due to switching focus.
+
 ## [0.4.1] - 2023-05-16
 
 ### Added
