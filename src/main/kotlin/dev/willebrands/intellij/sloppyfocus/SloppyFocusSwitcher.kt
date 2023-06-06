@@ -2,6 +2,7 @@ package dev.willebrands.intellij.sloppyfocus
 
 import com.intellij.openapi.application.ModalityState
 import com.intellij.openapi.components.service
+import com.intellij.openapi.diagnostic.trace
 import com.intellij.openapi.project.Project
 import com.intellij.util.Alarm
 import dev.willebrands.intellij.sloppyfocus.filters.ComponentTypeFilters
@@ -27,7 +28,7 @@ class SloppyFocusSwitcher(private val project: Project) : ComponentMouseListener
         }
 
     override fun mouseEntered(event: ComponentMouseEvent) {
-        pluginLogger.debug("mouse entered ${event.component.javaClass.name}")
+        pluginLogger.trace { "mouse entered ${event.component.javaClass.name}" }
         if (componentFilter.test(event.component)) {
             focusSwitcherAlarm.cancelAllRequests()
             focusSwitcherAlarm.addRequest({ switchFocus(event.component) }, focusDelay, ModalityState.NON_MODAL)
@@ -35,7 +36,7 @@ class SloppyFocusSwitcher(private val project: Project) : ComponentMouseListener
     }
 
     override fun mouseExited(event: ComponentMouseEvent) {
-        pluginLogger.debug("mouse exited ${event.component.javaClass.name}")
+        pluginLogger.trace { "mouse exited ${event.component.javaClass.name}" }
         focusSwitcherAlarm.cancelAllRequests()
     }
 
