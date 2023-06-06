@@ -2,8 +2,9 @@
 
 ## [Unreleased]
 
-### Changed
+## [0.5.0] - 2023-06-06
 
+### Changed
 - Improved popup detection. Before only the ActionManager popup stack was checked. Now we also check whether
   the `PopupFactory` is aware of any active popups. This should prevent more popups (e.g. new Angular schematic) from
   being auto-closed due to switching focus.
@@ -41,7 +42,8 @@
 - Supports sloppy focus for editor windows.
 - Initial plugin version.
 
-[Unreleased]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.2.0...v0.3.0
