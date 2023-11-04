@@ -10,9 +10,8 @@ class PopupMenuStateVetoableFocusListener : VetoableFocusSwitchListener {
         val actionPopupStackEmpty = ActionManagerEx.getInstanceEx().isActionPopupStackEmpty
         val popupActive = JBPopupFactory.getInstance().isPopupActive
         val allowFocusSwitch = actionPopupStackEmpty && !popupActive
-        logVetoDecision(allowFocusSwitch) {
+        return decideAndLog(allowFocusSwitch) {
             "Action popup stack empty = $actionPopupStackEmpty; popup active = $popupActive"
         }
-        return allowFocusSwitch
     }
 }
