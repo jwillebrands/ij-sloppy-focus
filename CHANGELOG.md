@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Fixed
+- Prevent closing the Find/Replace in path dialog by specifically checking whether it is open before switching focus.
+
 ## [0.5.0] - 2023-06-06
 
 ### Changed
