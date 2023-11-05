@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.6.0] - 2023-11-05
+
 ### Fixed
 - Prevent closing the Find/Replace in path dialog by specifically checking whether it is open before switching focus.
 
@@ -45,7 +47,8 @@
 - Supports sloppy focus for editor windows.
 - Initial plugin version.
 
-[Unreleased]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.4.1...v0.5.0
 [0.4.1]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/jwillebrands/ij-sloppy-focus/compare/v0.3.0...v0.4.0
