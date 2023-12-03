@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+### Added
+- Add support for IDE version 2023.3.
+
+### Changed
+- [BREAKING] Changed minimum IDE version to 2022.1 (from 2021.1). This change was required to support 2023.3.
+  Unfortunately, the UI DSL methods used to keep supporting 2021.1 have been removed in 2023.3.
+  If this affects you, please raise an issue, and I'll see about setting up a separate channel for prior versions.
+
 ## [0.6.0] - 2023-11-05
 
 ### Fixed
