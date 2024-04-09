@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+- Add support for IDE version 2024.1.
+
 ## [0.7.0] - 2023-12-05
 
 ### Added
