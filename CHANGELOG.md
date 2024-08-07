@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Changed
+- [BREAKING] Dropped support for IntelliJ versions lower than 2023.2. This was required to switch to IntelliJ Platform Plugin 2.0 in order to support 2024.2.
+
 ## [0.8.0] - 2024-04-09
 
 ### Added
