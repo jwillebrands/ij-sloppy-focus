@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- Stop enforcing an upper limit for IDEA version.
+
 ## [0.9.0] - 2024-08-07
 
 ### Changed
