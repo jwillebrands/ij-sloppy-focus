@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix 2024.3 compatability by replacing Find/Replace API marked as internal.
+
 ## [0.9.1] - 2024-10-09
 
 - Stop enforcing an upper limit for IDEA version.
